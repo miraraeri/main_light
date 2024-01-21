@@ -1,10 +1,10 @@
 import streamlit as st
-st.title('Наш новый проект')
+st.title('Супер мега крутой проект')
 flag = False
 button_pressed = st.button("Рассчитать возможность получения займа")
 if button_pressed:
   flag = not flag
 if flag:
-  st.text('Исход 1')
+  st.text('Исход 1сыршвсршыостошыв')
 else:
-  st.text('Исход 2')
+  st.text('Исход 2мавировыиарыимиаым')
