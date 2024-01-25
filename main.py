@@ -24,9 +24,9 @@ button_pressed = st.button("Рассчитать освещенность и к�
 
 if button_pressed:
         if text_input[1].isdigit() and text_input[2].isdigit() and text_input[3].isdigit() and text_input[4].isdigit():
-          s = int(text_input[2]) * int(text_input[1])
-          i = s / (int(text_input[3])) * (int(text_input[2]) + int(text_input[1]))
-          e = (i * int(text_input[4])) / s
+          s =float(text_input[2]) * float(text_input[1])
+          i = s / (float(text_input[3])) * (float(text_input[2]) + float(text_input[1]))
+          e = (i * float(text_input[4])) / s
           n = (e * s) / ( 1 * 345 * 1,1) 
           print(s)
           print(e)
