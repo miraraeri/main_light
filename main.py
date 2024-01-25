@@ -17,10 +17,10 @@ text_input[4] = st.text_input("Введите показатель светов�
 #N=(E*S)/(U*Ф*Кз) # кол-во светильников
 #i=S/(h - h1)*(a + b) #индекс
 button_pressed = st.button("Рассчитать освещенность и количество светильников")
-s = int(text_input[2]) * int(text_input[1])
-i = s / (int(text_input[3])) * (int(text_input[2]) + int(text_input[1]))
-e = (i * int(text_input[4])) / s
-n=(e * s) / ( 1 * 345 * 1,1) 
+#s = int(text_input[2]) * int(text_input[1])
+#i = s / (int(text_input[3])) * (int(text_input[2]) + int(text_input[1]))
+#e = (i * int(text_input[4])) / s
+#n=(e * s) / ( 1 * 345 * 1,1) 
 
 if button_pressed:
         if text_input[1].isdigit() and text_input[2].isdigit() and text_input[3].isdigit() and text_input[4].isdigit():
