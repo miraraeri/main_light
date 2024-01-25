@@ -30,3 +30,5 @@ if button_pressed:
           n = (e * s) / (1 * 345 * 1.1)
           st.text(f'Освещенность: {e}')
           st.text(f'Количество ламп: {n}')
+        else:
+          st.error("Неверно введены данные")
