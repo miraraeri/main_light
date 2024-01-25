@@ -27,7 +27,6 @@ if button_pressed:
           s =float(text_input[2]) * float(text_input[1])
           i = s / (float(text_input[3])) * (float(text_input[2]) + float(text_input[1]))
           e = (i * float(text_input[4])) / s
-          n = (e * s) / (1 * 345 * 1.1) 
-          print(s)
-          print(e)
-          print(n)
+          n = (e * s) / (1 * 345 * 1.1)
+          st.text(f'Освещенность: {e}')
+          st.text(f'Количество ламп: {n}')
