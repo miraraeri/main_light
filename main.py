@@ -1,4 +1,12 @@
 import streamlit as st
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
 st.header("DasLicht")
 text_input = [0, 0, 0, 0, 0]
 text_input[1] = st.text_input("Введите длину помещения", "Введите количество метров")
@@ -7,8 +15,10 @@ text_input[3] = st.text_input(  "Введите расстояние между 
   "Введите количество метров")
 text_input[4] = st.text_input("Введите показатель световой отдачи", "Введите количество люксов")
 
-
-
+text_input[1] = text_input[1].replace(',', ".")
+text_input[2] = text_input[2].replace(',', ".")
+text_input[3] = text_input[3].replace(',', ".")
+text_input[4] = text_input[4].replace(',', ".")
 
 # ключевые показатели для нас разрабов): S - площадь помещения (м^2), A - длина помещения (м)
 # B - ширина помещения (м), H - расстояние между потенциальным светильником и поверхностью,
@@ -17,13 +27,10 @@ text_input[4] = st.text_input("Введите показатель светов�
 #N=(E*S)/(U*Ф*Кз) # кол-во светильников
 #i=S/(h - h1)*(a + b) #индекс
 button_pressed = st.button("Рассчитать освещенность и количество светильников")
-#s = int(text_input[2]) * int(text_input[1])
-#i = s / (int(text_input[3])) * (int(text_input[2]) + int(text_input[1]))
-#e = (i * int(text_input[4])) / s
-#n=(e * s) / (1 * 345 * 1.1) 
+ 
 
 if button_pressed:
-        if text_input[1].isdigit() and text_input[2].isdigit() and text_input[3].isdigit() and text_input[4].isdigit():
+        if is_number(text_input[1]) and is_number(text_input[2]) and is_number(text_input[3]) and is_number(text_input[4]):
             s =float(text_input[2]) * float(text_input[1])
             i = s / (float(text_input[3])) * (float(text_input[2]) + float(text_input[1]))
             e = (i * float(text_input[4])) / s
