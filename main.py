@@ -1,5 +1,5 @@
 import streamlit as st
-st.title("DasLicht")
+st.title("Das Licht")
 text_input = [0, 0, 0, 0, 0]
 text_input[1] = st.text_input("Введите длину помещения", "Введите количество метров")
 text_input[2] = st.text_input("Введите ширина помещения", "Введите количество метров")
