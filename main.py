@@ -18,7 +18,7 @@ text_input[0] = st.text_input("Введите световой поток", "в 
 
 
 text_input[1] = text_input[1].replace(',', ".")
-text_input[2] = text_input[2].replаce(',', ".")
+text_input[2] = text_input[2].replace(',', ".")
 text_input[3] = text_input[3].replace(',', ".")
 text_input[4] = text_input[4].replace(',', ".")
 text_input[0] = text_input[0].replace(',', ".")
@@ -34,7 +34,7 @@ button_pressed = st.button("Рассчитать освещенность и к�
 
 if button_pressed:
         if is_number(text_input[1]) and is_number(text_input[2]) and is_number(text_input[3]) and is_number(text_input[4]):
-            s =float(text_input[2]) * float(text_input[1])
+            s = float(text_input[2]) * float(text_input[1])
             i = s / (float(text_input[3])) * (float(text_input[2]) + float(text_input[1]))
             e = (i * float(text_input[4])) / s
             f = float(text_input[0])
