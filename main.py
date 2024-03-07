@@ -14,14 +14,14 @@ text_input[2] = st.text_input("Введите ширина помещения", 
 text_input[3] = st.text_input(  "Введите расстояние между потенциальным светильником и поверхностью, на которую падает свет", 
   "Введите количество метров")
 text_input[4] = st.text_input("Введите показатель световой отдачи", "Введите количество люксов")
-text_input[5] = st.text_input("Введите световой поток", "в люменах")
+text_input[0] = st.text_input("Введите световой поток", "в люменах")
 
 
 text_input[1] = text_input[1].replace(',', ".")
 text_input[2] = text_input[2].replаce(',', ".")
 text_input[3] = text_input[3].replace(',', ".")
 text_input[4] = text_input[4].replace(',', ".")
-text_input[5] = text_input[5].replace(',', ".")
+text_input[0] = text_input[5].replace(',', ".")
 
 # ключевые показатели для нас разрабов): S - площадь помещения (м^2), A - длина помещения (м)
 # B - ширина помещения (м), H - расстояние между потенциальным светильником и поверхностью,
@@ -37,7 +37,7 @@ if button_pressed:
             s =float(text_input[2]) * float(text_input[1])
             i = s / (float(text_input[3])) * (float(text_input[2]) + float(text_input[1]))
             e = (i * float(text_input[4])) / s
-            f = float(text_input[5])
+            f = float(text_input[0])
             n = 0
             if s <= 100 and float(text_input[3]) <= 2.7:
                 n = (e * s * 2.5) / f
