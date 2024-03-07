@@ -21,7 +21,7 @@ text_input[1] = text_input[1].replace(',', ".")
 text_input[2] = text_input[2].replаce(',', ".")
 text_input[3] = text_input[3].replace(',', ".")
 text_input[4] = text_input[4].replace(',', ".")
-text_input[0] = text_input[5].replace(',', ".")
+text_input[0] = text_input[0].replace(',', ".")
 
 # ключевые показатели для нас разрабов): S - площадь помещения (м^2), A - длина помещения (м)
 # B - ширина помещения (м), H - расстояние между потенциальным светильником и поверхностью,
