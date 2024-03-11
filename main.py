@@ -43,7 +43,7 @@ if button_pressed:
                 n = (e * s * 2.5) / f
             else:
                 n = (e * s * 3) / f
-            st.text(f'Освещенность: {e}')
+            st.text(f'Необходимая освещенность: {e}')
             st.text(f'Количество ламп: {round(n)}')
         else:
             st.error("Неверно введены данные")
