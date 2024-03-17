@@ -1,4 +1,9 @@
 import streamlit as st
+from math import pi
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
 def is_number(s):
     try:
         float(s)
@@ -46,3 +51,14 @@ if button_pressed:
             st.text(f'Количество ламп: {round(n)}')
         else:
             st.error("Неверно введены данные")
+
+
+data_0 = [
+    (0, 0),
+    (Rb * 0.6, Rb * 0.6 / Eb),
+    (Rbn, 0.002),
+    (Rbn, 0.0035)]
+
+# Создание DataFrame
+df_0 = pd.DataFrame(data_0, columns=['σ', 'ε'])
+df_0 = df_0.round(6)
