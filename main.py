@@ -2,6 +2,8 @@ import streamlit as st
 
 from math import pi
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 def is_number(s):
     try:
