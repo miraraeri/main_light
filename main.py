@@ -10,8 +10,8 @@ def is_number(s):
 st.header("DasLicht")
 text_input = [0, 0, 0, 0, 0]
 text_input[1] = st.text_input("Введите длину помещения",placeholder="в метрах")
-text_input[2] = st.text_input("Введите ширина помещения, placeholder="в метрах")
-text_input[3] = st.text_input("Введите высоту стола",placeholder="в метрах")
+text_input[2] = st.text_input("Введите ширина помещения", placeholder="в метрах")
+text_input[3] = st.text_input("Введите высоту стола" ,placeholder="в метрах")
 text_input[4] = st.text_input("Введите показатель световой отдачи", placeholder="в люксах")
 text_input[0] = st.text_input("Введите световой поток", placeholder="в люменах")
 
