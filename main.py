@@ -2,7 +2,6 @@ import streamlit as st
 
 from math import pi
 import pandas as pd
-import matplotlib.pyplot as plt
 
 def is_number(s):
     try:
@@ -52,8 +51,8 @@ if button_pressed:
         else:
             st.error("Неверно введены данные")
 
-data_0 = [
-    (0, 0),
-    (100 * 0.6, 100 * 0.6 / 200),
-    (100, 0.002),
-    (100, 0.0035)]
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
