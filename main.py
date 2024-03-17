@@ -2,7 +2,7 @@ import streamlit as st
 
 from math import pi
 import pandas as pd
-import matplotlib
+import matplotlib.pyplot as plt
 
 
 def is_number(s):
@@ -54,23 +54,9 @@ if button_pressed:
             st.error("Неверно введены данные")
 
 
-with st.expander('Расчёты'):
-    on1 = st.toggle('Отобразить график')
+
     
-    if on1:
-        plt.clf()
-        col1, col2 = st.columns([1,2])
-        
-        with col1:
-            st.write("щщщ")
-            st.write(df_0)
-        with col2:
-            # Разделение данных на оси x и y
-            y = [item[0] for item in data_0]
-            x = [item[1] for item in data_0]
-            
-            # Построение графика
-            plt.plot(x, y, marker='o')
-            st.write('Тоооо')
+   plt.plot(x, y, marker='o')
+            st.write('Трехлинейная диаграмма деформирования бетона на сжатие')
             plt.grid(True)
             st.pyplot(plt)
