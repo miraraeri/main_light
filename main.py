@@ -1,7 +1,6 @@
 import streamlit as st
 
 from math import pi
-from pylab import *
 import pandas as pd
 import matplotlib.pyplot as plt
 
