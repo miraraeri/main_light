@@ -53,10 +53,8 @@ if button_pressed:
         else:
             st.error("Неверно введены данные")
 
-
-
-    
-   plt.plot(x, y, marker='o')
-            st.write('Трехлинейная диаграмма деформирования бетона на сжатие')
-            plt.grid(True)
-            st.pyplot(plt)
+data_0 = [
+    (0, 0),
+    (2, 100),
+    (100, 0.002),
+    (100, 0.0035)]
