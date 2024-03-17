@@ -53,14 +53,14 @@ if button_pressed:
 
 
 with st.expander('Расчёты'):
-    on1 = st.toggle('Отобразить деформирование бетона на сжатие')
+    on1 = st.toggle('Отобразить график')
     
     if on1:
         plt.clf()
         col1, col2 = st.columns([1,2])
         
         with col1:
-            st.write("Таблица деформирования бетона на сжатие:")
+            st.write("щщщ")
             st.write(df_0)
         with col2:
             # Разделение данных на оси x и y
@@ -69,6 +69,6 @@ with st.expander('Расчёты'):
             
             # Построение графика
             plt.plot(x, y, marker='o')
-            st.write('Трехлинейная диаграмма деформирования бетона на сжатие')
+            st.write('Тоооо')
             plt.grid(True)
             st.pyplot(plt)
