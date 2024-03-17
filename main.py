@@ -53,12 +53,23 @@ if button_pressed:
             st.error("Неверно введены данные")
 
 
-data_0 = [
-    (0, 0),
-    (Rb * 0.6, Rb * 0.6 / Eb),
-    (Rbn, 0.002),
-    (Rbn, 0.0035)]
-
-# Создание DataFrame
-df_0 = pd.DataFrame(data_0, columns=['σ', 'ε'])
-df_0 = df_0.round(6)
+with st.expander('Расчёты'):
+    on1 = st.toggle('Отобразить деформирование бетона на сжатие')
+    
+    if on1:
+        plt.clf()
+        col1, col2 = st.columns([1,2])
+        
+        with col1:
+            st.write("Таблица деформирования бетона на сжатие:")
+            st.write(df_0)
+        with col2:
+            # Разделение данных на оси x и y
+            y = [item[0] for item in data_0]
+            x = [item[1] for item in data_0]
+            
+            # Построение графика
+            plt.plot(x, y, marker='o')
+            st.write('Трехлинейная диаграмма деформирования бетона на сжатие')
+            plt.grid(True)
+            st.pyplot(plt)
